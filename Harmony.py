@@ -1,3 +1,5 @@
+#This doesn't work and I don't know why - the Harmony Python documentation sucks
+
 import harmony_connect_client
 from __future__ import print_function
 import time
@@ -7,9 +9,9 @@ from pprint import pprint
 
 configuration = harmony_connect_client.Configuration()
 # Configure API key authorization: AppId
-configuration.api_key['app_id'] = 'YOUR_API_KEY'
+configuration.api_key['app_id'] = 'Change_To_YOUR_APP_ID'
 # Configure API key authorization: AppKey
-configuration.api_key['app_key'] = 'YOUR_API_KEY'
+configuration.api_key['app_key'] = 'Change_To_YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = harmony_connect_client.ChainsApi(harmony_connect_client.ApiClient(configuration))
