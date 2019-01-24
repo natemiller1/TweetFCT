@@ -1,3 +1,4 @@
+#Not actively used right now
 from factom import Factomd, FactomWalletd
 
 # Default settings
