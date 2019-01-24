@@ -11,7 +11,9 @@ The code below will launch a virtual environment and jupyter notebook in your br
 You can read more about Tweepy, Factom-API, and the Twitter API in the below links:
 
 http://docs.tweepy.org/en/3.7.0/streaming_how_to.html
+
 https://github.com/bhomnick/factom-api
+
 https://developer.twitter.com/en/docs/tweets/filter-realtime/guides/basic-stream-parameters
 
 **Linux**
