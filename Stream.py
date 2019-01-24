@@ -40,8 +40,12 @@ class MyStreamListener(tweepy.StreamListener):
             return
         if status.in_reply_to_user_id_str is 25073877:  #this filters replies to this twitter ID
             return
-        print(status.text)
-        walletd.new_entry(factomd, chain_id, ['random', 'entry', 'id'], status.text, ec_address=ec_address) #makes entry into the factom testnet
+        
+        name = status.user.screen_name #pulls username of tweeter
+        
+        print(name, 'tweeted', status.text)
+        
+        walletd.new_entry(factomd, chain_id, ['random', 'entry', 'id'], [name, 'tweeted', status.text], ec_address=ec_address) #makes entry into the factom testnet
 
 myStreamListener = MyStreamListener()
 myStream = tweepy.Stream(auth = api.auth, listener=myStreamListener)
