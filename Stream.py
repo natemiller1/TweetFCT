@@ -43,9 +43,10 @@ class MyStreamListener(tweepy.StreamListener):
         
         name = status.user.screen_name #pulls username of tweeter
         
+        fct_entry = ''.join(('@', name, ' tweeted: ', status.text)) #combines the the message into a string that can be written to Factom
         print(name, 'tweeted', status.text)
         
-        walletd.new_entry(factomd, chain_id, ['random', 'entry', 'id'], [name, 'tweeted', status.text], ec_address=ec_address) #makes entry into the factom testnet
+        walletd.new_entry(factomd, chain_id, ['random', 'entry', 'id'], fct_entry, ec_address=ec_address) #makes entry into the factom testnet
 
 myStreamListener = MyStreamListener()
 myStream = tweepy.Stream(auth = api.auth, listener=myStreamListener)
