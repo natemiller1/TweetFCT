@@ -6,7 +6,9 @@ Starting up:
 Make sure you have git and python 3 installed (type git and python to double check)
 
 The code below will launch a virtual environment and jupyter notebook in your browser (this isn't required, feel free to use whatever your favorite coding method is)
+
 **Linux**
+
 ```
 git clone https://github.com/natemiller1/TweetFCT.git
 cd TweetFCT
@@ -17,6 +19,7 @@ jupyter notebook
 ```
 
 **PC**
+
 From powershell:
 ```
 git clone https://github.com/natemiller1/TweetFCT.git
