@@ -46,7 +46,6 @@ Other ideas:
 2. want to track their retweets as well
 3. Plenty of other cool niceties to add as well - we could automatically tweet when certain factom entries are made, we could also run a website that streams the tweets and updates when they're factomized.
 4. We'll need a database of twitter accounts to follow
-
-~~5. Right now, it just records the text of the tweet not who made it, so I'll fix that soon.~~
+5. ~~Right now, it just records the text of the tweet not who made it, so I'll fix that soon.~~
 6. Will want a separate chain for each person we track? Could do either, will want to automate chain creation and decide a good structure for the entry ID
 7. Will possibly need a database to record tweets as they come in - may provide additional functionality down the road. Right now code streams tweets directly to Factom.
