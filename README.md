@@ -9,6 +9,8 @@ https://github.com/bhomnick/factom-api
 
 https://developer.twitter.com/en/docs/tweets/filter-realtime/guides/basic-stream-parameters
 
+**Pre-Req:** You'll need a twitter Dev account and associated keys, get started here: https://developer.twitter.com/
+
 **Starting up** (this isn't required, feel free to use whatever your favorite coding method is):
 
 Make sure you have git and python 3 installed (type git and python to double check)
