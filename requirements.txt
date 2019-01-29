@@ -1,3 +1,10 @@
 tweepy==3.7.0
 factom-api==0.1.1
-
+ipython
+matplotlib
+scipy
+numpy
+pandas
+dataset
+psycopg2
+textblob
