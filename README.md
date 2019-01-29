@@ -41,6 +41,8 @@ python -m pip install -r requirements.txt
 jupyter notebook
 ```
 
+Once installed you can run the program through jupyter notebook or run it from the command line: ```python stream.py``` or ```python3 stream.py```
+
 The stream.py file contains necessary code for a quick POC to stream tweets and write them to the Factom Testnet. Here are some thoughts on additional things needed:
 
 Other ideas:
