@@ -11,11 +11,11 @@ https://developer.twitter.com/en/docs/tweets/filter-realtime/guides/basic-stream
 
 **Pre-Req:** You'll need a twitter Dev account and associated keys, get started here: https://developer.twitter.com/
 
-**Starting up** (this isn't required, feel free to use whatever your favorite coding method is):
+**Starting up** (launching the virtual environment isn't necessary, feel free to use whatever your favorite coding method is):
 
 Make sure you have git and python 3 installed (type git and python to double check)
 
-The code below will launch a virtual environment and jupyter notebook in your browser 
+The code below will clone this directory, launch a virtual environment, install the required packages, and launch jupyter notebook in your browser.
 
 
 **Linux**
