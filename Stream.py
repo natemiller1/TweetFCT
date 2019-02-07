@@ -1,5 +1,6 @@
 import tweepy #Python twitter API handler
 from factom import Factomd, FactomWalletd #python Factom API
+import settings
 
 #specify RPC credentials:
 fct_address = 'FA3xxxxxxx'
@@ -22,8 +23,8 @@ walletd = FactomWalletd(
 )
 chain_id = 'da2ffed0ae7b33acc718089edc0f1d001289857cc27a49b6bc4dd22fac971495' #this will need to be automated to create a new chain for each twitter account tracked
 
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_token, access_token_secret)
+auth = tweepy.OAuthHandler(settings.TWITTER_APP_KEY, settings.TWITTER_APP_SECRET)
+auth.set_access_token(settings.TWITTER_KEY, settings.TWITTER_SECRET)
 api = tweepy.API(auth)
 
 #Define Listening Class
