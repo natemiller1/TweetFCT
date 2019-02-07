@@ -5,4 +5,9 @@ TWITTER_SECRET =
 TWITTER_APP_KEY = 
 TWITTER_APP_SECRET = 
 
+#specify RPC credentials:
+fct_address = 'FA3xxxxxxx'
+ec_address = 'EC34xxxxxx'
+
+
 #CONNECTION_STRING -- use sqlite:///tweets.db as a default if you need to. It's recommended to use postgresql, but not necessary.
