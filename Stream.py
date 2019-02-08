@@ -53,3 +53,4 @@ myStreamListener = MyStreamListener()
 myStream = tweepy.Stream(auth = api.auth, listener=myStreamListener)
 
 myStream.filter(follow=["2211149702"]) #change number to whatever twitter ID (or IDs) you want to follow (not the @ handle), you can look up username ID's here: https://tweeterid.com/
+stream.filter(track=settings.TRACK_TERMS)
