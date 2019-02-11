@@ -44,7 +44,7 @@ class StreamListener(tweepy.StreamListener):
         
         walletd.new_entry(factomd, chain_id, ['random', 'entry', 'id'], fct_entry, ec_address=ec_address) #makes entry into the factom testnet
 
-StreamListener = MyStreamListener()
+StreamListener = StreamListener()
 stream = tweepy.Stream(auth = api.auth, listener=StreamListener)
 
 stream.filter(follow=["1088451823642595328"]) #change number to whatever twitter ID (or IDs) you want to follow (not the @ handle), you can look up username ID's here: https://tweeterid.com/
