@@ -3,8 +3,8 @@ from factom import Factomd, FactomWalletd #python Factom API
 import settings
 
 #specify RPC credentials:
-fct_address = 'FA3xxxxxxx'
-ec_address = 'EC34xxxxxx'
+fct_address = settings.FCT_ADDRESS
+ec_address = settings.EC_ADDRESS
 
 factomd = Factomd(
     host='http://xx.xx.xx.xx:8088',
