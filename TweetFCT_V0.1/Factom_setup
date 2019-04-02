@@ -1,0 +1,22 @@
+#Designing this to hold all info related to the factom blockchain
+
+import settings
+
+
+
+factomd = Factomd(
+    host='http://xx.xx.xx.xx:8088',
+    fct_address=fct_address,
+    ec_address=ec_address,
+    username='rpc_username',
+    password='rpc_password'
+)
+
+walletd = FactomWalletd(
+    host='http://xx.xx.xx.xx:8089',
+    fct_address=fct_address,
+    ec_address=ec_address,
+    username='rpc_username',
+    password='rpc_password'
+)
+chain_id = 'da2ffed0ae7b33acc718089edc0f1d001289857cc27a49b6bc4dd22fac971495' #this will need to be automated to create a new chain for each twitter account tracked
