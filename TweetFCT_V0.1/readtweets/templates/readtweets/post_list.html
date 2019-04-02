@@ -1,0 +1,24 @@
+{% load static %}
+<html>
+    <head>
+        <title>BlockChain Tweets</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/readtweets.css' %}">
+    </head>
+    <body>
+        <h2>Hello, welcome!</h2>
+        <h3>Blockchain tweets coming soon - stay tuned!</h3>
+        <br>
+        {% for tweet in tweets %}
+        <div class="row">
+            <h4 class="column">User & Chain ID: {{tweet.userid }}</h4>
+            <div class="vl"></div>
+            <h4 class="column">TweetID: {{tweet.tweetid }}</h4>
+            <br>
+            <br>
+            <br>
+        </div>
+        {% endfor %}
+    </body>
+</html>
