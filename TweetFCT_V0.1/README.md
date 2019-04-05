@@ -21,18 +21,18 @@ If you do not have pip installed, see the documentation on how to properly do so
 
 From the command line run the following lines to activate a python virutal environment:
 
-'''
+```
 python3 -m venv venv
 source venv/bin/activate
-'''
+```
 
 ***Step 3: Install Django***
 
 Once pip is installed on your machine and you have activated and are working in your virtual environment, run the following line from the command line to install Django:
 
-'''
+```
 pip install Django
-'''
+```
 
 You should be good to operate from here, just clone this github repository. Directions on how to operate the program are posted below.
 
@@ -44,9 +44,9 @@ Once installed you can run the program contents form the command line as follows
 
 From the command line run
 
-'''
+```
 python master.py
-'''
+```
 
 If successful, you should see the commandline say 'hello' and a stream listener will be engaged that will notify you from the command line every time the account @factombot tweets and print the contents of the tweet. It will then print 'successful entry to the blockchain' as well as the contents of the entry. After a few minutes, the entry should be displayed on the Factom blockchain (once the next block is added to the blockchain). To check go to https://testnet.factoid.org/dashboard and enter the chain id that is displayed. Once you navigate to that page you can navigate to the entry hash for the most recent tweet or read through past tweets.
 
@@ -54,16 +54,16 @@ If successful, you should see the commandline say 'hello' and a stream listener 
 
 from the command line, navigate to the directory where you cloned this github repository. Once there, you must activate the python virtual environment you installed to deploy a django web app. To do so, run the following commands:
 
-'''
+```
 source myvenv/bin/activate
 python manage.py runserver
-'''
+```
 
 If successful, a url with your local host and the port you're streaming to should be displayed. Copy and paste this url into your browser of choice and the web page should be diplayed of the Tweets written by @factombot to the Factom blockchain. To cease streaming the webppage from your machine go back to your command line and click control + C. This should terminate the stream. Then run the following line from the command line to deactivate your python virtual environment:
 
-'''
+```
 deactivate
-'''
+```
 
 Next Steps:
 1. Automate everything so the program does not need to rely on hardcoded key handling/twitter account information
