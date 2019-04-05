@@ -87,7 +87,7 @@ class StreamListener(tweepy.StreamListener):
         4.) ec_address --> the ec_address we defined and activated earlier
         '''
         try:
-            resp = walletd.new_entry(factomd, chain_id, [ name, str(userid), str(tweetid), public], str(fct_entry), ec_address=ec_address) # makes entry into the factom testnet
+            resp = walletd.new_entry(factomd, chain_id, [ "TwitterBank Record", str(userid), str(tweetid), public], str(fct_entry), ec_address=ec_address) # makes entry into the factom testnet
             print('successfully entered to blockchain') #prints to your command line so you know that it you were successful
             print(resp) #prints the entry information to commandline. Once next block is added to blockchain you can view on https://testnet.factoid.org/dashboard
         except exceptions.FactomAPIError as e:
