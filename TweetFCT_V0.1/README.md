@@ -1,4 +1,4 @@
-# TweetFCT
+# TweetFCT Version 0.1
 Python 3.7 implementation to take tweets from Twitter API, write them to the Factom Testnet, and use a Django based web-app to display them on webpage attatched to your localhost. Second Iteration on Proof of Concept!
 
 You can read more about Tweepy, Factom-API, the Twitter API, and Django in the links below:
