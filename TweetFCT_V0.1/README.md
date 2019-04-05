@@ -70,3 +70,6 @@ Next Steps:
 2. Figure out a way to incorporate identity of the one posting tweets to Factom, that will be a universal identity for that user.
 3. Quickly determine the number of users who have validated a tweet as legitimate or not.
 4. Incorporate this with database
+5. Filter out all tweet types except the tweet from the account
+6. Filter out retweets, quote tweets, extended tweets, etc.
+7. Account for deleted tweets
