@@ -1,7 +1,7 @@
 # TweetFCT
-Python 3.7 implementation to take tweets from Twitter API and write to the Factom Testnet. Very basic proof of concept!
+Python 3.7 implementation to take tweets from Twitter API, write them to the Factom Testnet, and use a Django based web-app to display them on webpage attatched to your localhost. Second Iteration on Proof of Concept!
 
-You can read more about Tweepy, Factom-API, and the Twitter API in the below links:
+You can read more about Tweepy, Factom-API, the Twitter API, and Django in the links below:
 
 http://docs.tweepy.org/en/3.7.0/streaming_how_to.html
 
@@ -9,47 +9,51 @@ https://github.com/bhomnick/factom-api
 
 https://developer.twitter.com/en/docs/tweets/filter-realtime/guides/basic-stream-parameters
 
-**Pre-Req:** You'll need a twitter Dev account and associated keys, get started here: https://developer.twitter.com/
+https://www.djangoproject.com/
 
-**Starting up** (launching the virtual environment isn't necessary, feel free to use whatever your favorite coding method is):
+**Pre-Req:** If you are just landing on this page, go back to https://github.com/natemiller1/TweetFCT, and read how to set up your environment to run this program. You also may need to install django if you have not done so already. Directions on how to do so are posted below.
 
-Make sure you have git and python 3 installed (type git and python to double check)
+***Step 1: Make Sure You have pip installed***
 
-The code below will clone this directory, launch a virtual environment, install the required packages, and launch jupyter notebook in your browser.
+If you do not have pip installed, see the documentation on how to properly do so for your machine here: https://pip.pypa.io/en/stable/installing/
 
+***Step 2: Activate Your Virtual Environment***
 
-**Linux**
+From the command line run the following lines to activate a python virutal environment:
+'''python3 -m venv venv'''
+'''source venv/bin/activate'''
 
-```
-git clone https://github.com/natemiller1/TweetFCT.git
-cd TweetFCT
-python3 -m venv venv
-source venv/bin/activate
-python3 -m pip install -r requirements.txt
-jupyter notebook
-```
+***Step 3: Install Django***
 
-**PC**
+Once pip is installed on your machine and you have activated and are working in your virtual environment, run the following line from the command line to install Django:
+'''pip install Django''
 
-From powershell:
-```
-git clone https://github.com/natemiller1/TweetFCT.git
-cd TweetFCT
-python -m virtualenv venv
-venv/Scripts/activate
-python -m pip install -r requirements.txt
-jupyter notebook
-```
+You should be good to operate from here, just clone this github repository. Directions on how to operate the program are posted below.
 
-Once installed you can run the program through jupyter notebook or run it from the command line: ```python stream.py``` or ```python3 stream.py```
+**Starting up** 
 
-The stream.py file contains necessary code for a quick POC to stream tweets and write them to the Factom Testnet. Here are some thoughts on additional things needed:
+Once installed you can run the program contents form the command line as follows:
 
-Other ideas:
-1. The on_status is important, we need to filter out random replies/tweets that aren't from the person we're tracking BUT we don't want to accidentally filter out real tweets (or allow the person to avoid being tracked by meeting one of our filtering criteria)
-2. want to track their retweets as well
-3. Plenty of other cool niceties to add as well - we could automatically tweet when certain factom entries are made, we could also run a website that streams the tweets and updates when they're factomized.
-4. We'll need a database of twitter accounts to follow
-5. ~~Right now, it just records the text of the tweet not who made it, so I'll fix that soon.~~
-6. Will want a separate chain for each person we track? Could do either, will want to automate chain creation and decide a good structure for the entry ID
-7. Will possibly need a database to record tweets as they come in - may provide additional functionality down the road. Right now code streams tweets directly to Factom.
+**To Stream Tweets to Factom**
+
+from the command line run
+'''python master.py'''
+
+If successful, you should see the commandline say 'hello' and a stream listener will be engaged that will notify you from the command line every time the account @factombot tweets and print the contents of the tweet. It will then print 'successful entry to the blockchain' as well as the contents of the entry. After a few minutes, the entry should be displayed on the Factom blockchain (once the next block is added to the blockchain). To check go to https://testnet.factoid.org/dashboard and enter the chain id that is displayed. Once you navigate to that page you can navigate to the entry hash for the most recent tweet or read through past tweets.
+
+**To Deploy the WebApp locally**
+
+from the command line, navigate to the directory where you cloned this github repository. Once there, you must activate the python virtual environment you installed to deploy a django web app. To do so, run the following commands:
+
+'''source myvenv/bin/activate'''
+'''python manage.py runserver'''
+
+If successful, a url with your local host and the port you're streaming to should be displayed. Copy and paste this url into your browser of choice and the web page should be diplayed of the Tweets written by @factombot to the Factom blockchain. To cease streaming the webppage from your machine go back to your command line and click control + C. This should terminate the stream. Then run the following line from the command line to deactivate your python virtual environment:
+
+'''deactivate'''
+
+Next Steps:
+1. Automate everything so the program does not need to rely on hardcoded key handling/twitter account information
+2. Figure out a way to incorporate identity of the one posting tweets to Factom, that will be a universal identity for that user.
+3. Quickly determine the number of users who have validated a tweet as legitimate or not.
+4. Incorporate this with database
