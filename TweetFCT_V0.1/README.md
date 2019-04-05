@@ -20,7 +20,7 @@ If you do not have pip installed, see the documentation on how to properly do so
 ***Step 2: Activate Your Virtual Environment***
 
 From the command line run the following lines to activate a python virutal environment:
-'''python3 -m venv venv'''
+''python3 -m venv venv''
 '''source venv/bin/activate'''
 
 ***Step 3: Install Django***
