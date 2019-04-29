@@ -40,7 +40,7 @@ def post_list(request):
 
     # read info from blockchain
     # using 'read_chain()'
-    # Create the object 
+    # Create the object
     # store that in a variable, passed as the third argument in 'render'
     chaininfo = factomd.read_chain(chain_id)
 
