@@ -1,0 +1,47 @@
+{% load static %}
+<html>
+    <head>
+        <title>Factomized Tweets</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/TweetApp.css' %}">
+    </head>
+
+    <body>
+        <div>
+            <h1>Factomized Tweets</h1>
+        </div>
+        <h2>Hello Welcome!</h2>
+        <h3>TFA & Consensus Networks Are Happy To Bring You Factomized Tweets!</h3>
+        <br>
+        {% for tweet in tweets %}
+        <div class="row">
+            <h4 class="column">
+                    <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">{{tweet.tweetid.text}}</p>&mdash; Factombot (@factombot) 
+                        <a href="https://twitter.com/factombot/status/{{tweet.tweetid.id}}?ref_src=twsrc%5Etfw")%></a>
+                    </blockquote>
+            </h4>
+            <h4 class="column">
+                    
+                    Chain ID: {{tweet.userid }} <br/>
+                    <br/>
+                    Verified By: {{tweet.scribe}} <br/>
+                    <br/>
+                    Number of Scribes: 'One' <br/>
+                    <br/>
+                    <a href="https://testnet.factoid.org/entry?hash={{tweet.entryhash}}"> View Entry</a>
+            </h4>
+            <br>
+            <br>
+            <br>
+        </div>
+       
+        {% endfor %}
+        
+        
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+        <script id="twitter-wjs" type="text/javascript" async defer src="//platform.twitter.com/widgets.js"></script>
+    </body>
+</html>

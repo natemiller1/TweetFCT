@@ -1,0 +1,19 @@
+.row {
+    display: flex;
+    padding-right: 30px;
+    padding-left: 15px;
+}
+
+.column {
+    flex: 50%;
+}
+
+title, h1 ,h2 , h3 , h5 {
+    color: #f56f12;
+}
+
+body {
+    color: #f56f12;
+    padding-right: 30px;
+    padding-left: 30px;
+}

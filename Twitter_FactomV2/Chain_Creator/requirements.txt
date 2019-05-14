@@ -1,0 +1,5 @@
+factom-api==0.1.1
+ipython
+dataset
+textblob
+psycopg2>=2.7,<3.0
